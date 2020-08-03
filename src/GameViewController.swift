@@ -67,7 +67,7 @@ class GameViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         let userInterfaceIdiom = UIDevice.current.userInterfaceIdiom
-        let isLandscape = UIDeviceOrientationIsLandscape(UIDevice.current.orientation)
+      let isLandscape = UIDevice.current.orientation.isLandscape
         let boundaryRangeXInput = (self.view?.bounds.size.width)!
         let boundaryRangeYInput = (self.view?.bounds.size.height)!
         let boundaryRangeX = self.sceneNode.backgroundLayer.getBoundaryRangeX(boundaryRangeXInput)

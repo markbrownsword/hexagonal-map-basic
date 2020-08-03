@@ -105,7 +105,7 @@ class LandingScene: GameSceneBase, TileMapScene {
     
     
     // MARK: GestureRecognizer functions
-    
+    @objc
     func handlePanFrom(recognizer: UIPanGestureRecognizer) {
         if recognizer.state != .changed {
             return
@@ -122,6 +122,7 @@ class LandingScene: GameSceneBase, TileMapScene {
         recognizer.setTranslation(CGPoint.zero, in: recognizer.view)
     }
     
+  @objc
     func handleTapFrom(recognizer: UITapGestureRecognizer) {
         if recognizer.state != .ended {
             return
@@ -140,6 +141,7 @@ class LandingScene: GameSceneBase, TileMapScene {
         self.currentSelectionlocation = self.setSelectionTileAt(targetLocation: targetLocation)
     }
     
+  @objc
     func handleLongPressFrom(recognizer: UILongPressGestureRecognizer) {
         if recognizer.state != .began {
             return
